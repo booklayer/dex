@@ -14,7 +14,18 @@
         "NODE_ENV",
         "GRAPHQL_SERVER_ENDPOINT",
         "DEX_AGGREGATOR_URL",
-        "MEDIA_TRACK_URL"
+        "MEDIA_TRACK_URL",
+        "DEX_AUTH0_DOMAIN",
+        "DEX_AUTH0_CLIENT_ID",
+        "DEX_AUTH0_CLIENT_SECRET",
+        "DEX_AUTH0_AUDIENCE",
+        "PRIVY_APP_ID",
+        "PRIVY_APP_SECRET",
+        "JWT_ISSUER",
+        "JWT_AUDIENCE",
+        "JWT_SECRET",
+        "JWT_EXPIRES_IN",
+        "JWT_COOKIE_NAME"
       ]
     },
     "dev": {
