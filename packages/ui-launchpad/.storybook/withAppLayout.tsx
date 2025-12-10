@@ -138,7 +138,7 @@ export function withAppLayout(Story: StoryFn) {
                   theme: "dark",
                   accentColor: "#BCFF2E",
                   logo: "https://liberfi.io/brand.png",
-                  landingHeader: "Sign in or sign up to Liberfi",
+                  landingHeader: "Sign in or sign up to BookLayer",
                   walletList: [
                     "phantom",
                     "okx_wallet",

@@ -16,6 +16,22 @@
 @source "../../../../../node_modules/@liberfi.io/ui-scaffold/dist/**/*.{js,ts,jsx,tsx}";
 @source "../../../../../node_modules/@liberfi.io/ui-media-track/dist/**/*.{js,ts,jsx,tsx}";
 
+@theme {
+  --color-bullish: #12C85A;
+  --color-bearish: #F04646;
+  --color-primary: #32bed9;
+  --color-primary-50: #e8f7fb;
+  --color-primary-100: #d1eef6;
+  --color-primary-200: #a3deee;
+  --color-primary-300: #75cde5;
+  --color-primary-400: #47bddd;
+  --color-primary-500: #32bed9;
+  --color-primary-600: #2ca8c3;
+  --color-primary-700: #258ea6;
+  --color-primary-800: #1e7588;
+  --color-primary-900: #175b6a;
+}
+
 @layer base {
   :root {
     --header-height: 60px;

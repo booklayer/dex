@@ -1,7 +1,7 @@
 export default {
   "extend": {
-    "application_name": "Liberfi",
-    "title": "Liberfi丨Trade any token, on any chain",
+    "application_name": "BookLayer",
+    "title": "BookLayer丨Trade any token, on any chain",
     "description": "Trade any token on any chain at the first chain-agnostic trading platform. No need to consider chains. 100% decentralized and self-custodial.",
     "languages": {
       "en": "English",
@@ -46,7 +46,7 @@ export default {
       "launch_token": "Launch Token"
     },
     "settings": {
-      "account_name": "Liberfi Account",
+      "account_name": "BookLayer Account",
       "deposit": "Deposit",
       "preferences": "Preferences",
       "social_medias": "Social Medias",
@@ -337,7 +337,7 @@ export default {
       }
     },
     "account": {
-      "universal_account": "Liberfi Account",
+      "universal_account": "BookLayer Account",
       "address": "Address",
       "add_cash": "Buy",
       "receive": "Receive",
@@ -506,8 +506,8 @@ export default {
         "copy_claim_code": "Copy Claim Code",
         "copy_claim_url": "Copy Claim URL",
         "share_to": "Share To",
-        "share_telegram_text": "You've received a Red Packet! 🎁 Join to claim your crypto gift! 🔥 #Liberfi",
-        "share_twitter_text": "You've received a Red Packet! 🎁 Join to claim your crypto gift! {{url}} 🔥 #Liberfi"
+        "share_telegram_text": "You've received a Red Packet! 🎁 Join to claim your crypto gift! 🔥 #BookLayer",
+        "share_twitter_text": "You've received a Red Packet! 🎁 Join to claim your crypto gift! {{url}} 🔥 #BookLayer"
       },
       "claim": {
         "message": "You've received a Red Packet!",

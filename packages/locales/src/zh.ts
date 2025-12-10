@@ -1,7 +1,7 @@
 export default {
   "extend": {
-    "application_name": "Liberfi",
-    "title": "Liberfi丨在任何链上交易任何代币",
+    "application_name": "BookLayer",
+    "title": "BookLayer丨在任何链上交易任何代币",
     "description": "在首个与链无关的交易平台上，于任何链上交易任何代币。无需考虑链的选择。100%去中心化且自托管。",
     "languages": {
       "en": "English",
@@ -46,7 +46,7 @@ export default {
       "launch_token": "创建代币"
     },
     "settings": {
-      "account_name": "Liberfi 账户",
+      "account_name": "BookLayer 账户",
       "deposit": "充值",
       "preferences": "偏好设置",
       "social_medias": "社交媒体",
@@ -337,7 +337,7 @@ export default {
       }
     },
     "account": {
-      "universal_account": "Liberfi 账户",
+      "universal_account": "BookLayer 账户",
       "address": "钱包地址",
       "add_cash": "购买",
       "receive": "接收",
@@ -506,8 +506,8 @@ export default {
         "copy_claim_code": "复制领取码",
         "copy_claim_url": "复制领取链接",
         "share_to": "分享到",
-        "share_telegram_text": "你已收到一个红包 🎁，加入即可领取你的加密礼物！🔥 #Liberfi",
-        "share_twitter_text": "你已收到一个红包 🎁，点击链接加入即可领取你的加密礼物！{{url}} 🔥 #Liberfi"
+        "share_telegram_text": "你已收到一个红包 🎁，加入即可领取你的加密礼物！🔥 #BookLayer",
+        "share_twitter_text": "你已收到一个红包 🎁，点击链接加入即可领取你的加密礼物！{{url}} 🔥 #BookLayer"
       },
       "claim": {
         "message": "你收到了一个红包！",
