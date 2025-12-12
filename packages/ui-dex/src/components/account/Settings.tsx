@@ -1,5 +1,3 @@
-import { ReactNode, useCallback } from "react";
-import { clsx } from "clsx";
 import { Avatar, Button } from "@heroui/react";
 import {
   DiscordIcon,
@@ -18,6 +16,8 @@ import {
   UserGuideIcon,
   useTranslation,
 } from "@liberfi/ui-base";
+import { clsx } from "clsx";
+import { ReactNode, useCallback } from "react";
 
 export type SettingsProps = {
   onSetting?: (key: string) => void;
@@ -41,42 +41,42 @@ export function Settings({ onSetting }: SettingsProps) {
   }, [appSdk, onSetting]);
 
   const handleOpenTwitter = useCallback(() => {
-    // appSdk.openPage("https://x.com/liberfi");
+    // appSdk.openPage("https://x.com/booklayer");
     onSetting?.("twitter");
   }, [onSetting]);
 
   const handleOpenTelegram = useCallback(() => {
-    // appSdk.openPage("https://t.me/liberfi");
+    // appSdk.openPage("https://t.me/booklayer");
     onSetting?.("telegram");
   }, [onSetting]);
 
   const handleOpenDiscord = useCallback(() => {
-    // appSdk.openPage("https://discord.com/liberfi");
+    // appSdk.openPage("https://discord.com/booklayer");
     onSetting?.("discord");
   }, [onSetting]);
 
   const handleOpenPrivacyPolicy = useCallback(() => {
-    // appSdk.openPage("https://liberfi.io/privacy-policy");
+    // appSdk.openPage("https://booklayer.org/privacy-policy");
     onSetting?.("privacy_policy");
   }, [onSetting]);
 
   const handleOpenTermsOfService = useCallback(() => {
-    // appSdk.openPage("https://liberfi.io/terms-of-service");
+    // appSdk.openPage("https://booklayer.org/terms-of-service");
     onSetting?.("terms_of_service");
   }, [onSetting]);
 
   const handleOpenSupport = useCallback(() => {
-    // appSdk.openPage("https://liberfi.io/support");
+    // appSdk.openPage("https://booklayer.org/support");
     onSetting?.("support");
   }, [onSetting]);
 
   const handleOpenFAQ = useCallback(() => {
-    // appSdk.openPage("https://liberfi.io/faq");
+    // appSdk.openPage("https://booklayer.org/faq");
     onSetting?.("faq");
   }, [onSetting]);
 
   const handleOpenUserGuide = useCallback(() => {
-    // appSdk.openPage("https://liberfi.io/docs");
+    // appSdk.openPage("https://booklayer.org/docs");
     onSetting?.("user_guide");
   }, [onSetting]);
 

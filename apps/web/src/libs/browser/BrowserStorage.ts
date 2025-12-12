@@ -1,7 +1,7 @@
 import { IStorage } from "@liberfi/core";
 
 export class BrowserStorage implements IStorage {
-  prefix = "liberfi";
+  prefix = "BookLayer";
 
   get = async <R>(key: string) => {
     const value = localStorage.getItem(`${this.prefix}_${key}`);

@@ -4,12 +4,23 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable unused-imports/no-unused-vars */
 import { formatLongNumber, getNumberDefaultPrecision, objectKeys } from "@/libs";
+import { tokenInfoAtom } from "@/states";
+import { DexClient } from "@chainstream-io/sdk";
+import { Candle, Resolution, Token } from "@chainstream-io/sdk/openapi";
+import { StreamApi } from "@chainstream-io/sdk/stream";
+import { useDexClient } from "@liberfi/react-dex";
+import { useRouter, useTranslation } from "@liberfi/ui-base";
+import { useAtomValue } from "jotai";
+import { isEmpty } from "lodash-es";
+import { DateTime } from "luxon";
+import { Dispatch, SetStateAction, useCallback, useEffect, useMemo, useState } from "react";
 import {
   ChartPropertiesOverrides,
   DatafeedConfiguration,
   ErrorCallback,
   HistoryCallback,
   IChartingLibraryWidget,
+  LanguageCode,
   LibrarySymbolInfo,
   OnReadyCallback,
   ResolutionString,
@@ -20,18 +31,7 @@ import {
   TradingTerminalFeatureset,
   TradingTerminalWidgetOptions,
   widget as Widget,
-  LanguageCode,
 } from "../../../../apps/web/public/static/charting_library";
-import { Dispatch, SetStateAction, useCallback, useEffect, useMemo, useState } from "react";
-import { DateTime } from "luxon";
-import { isEmpty } from "lodash-es";
-import { useDexClient } from "@liberfi/react-dex";
-import { Token, Resolution, Candle } from "@chainstream-io/sdk/openapi";
-import { DexClient } from "@chainstream-io/sdk";
-import { StreamApi } from "@chainstream-io/sdk/stream";
-import { tokenInfoAtom } from "@/states";
-import { useAtomValue } from "jotai";
-import { useRouter, useTranslation } from "@liberfi/ui-base";
 
 export const RESOLUTION_MAP = {
   "1S": Resolution._1s,
@@ -187,9 +187,9 @@ const configurationData: DatafeedConfiguration = {
   supports_marks: true,
   exchanges: [
     {
-      value: "Liberfi", // `exchange` argument for the `searchSymbols` method, if a user selects this exchange
-      name: "Liberfi", // filter name
-      desc: "Liberfi exchange", // full exchange name displayed in the filter popup
+      value: "BookLayer", // `exchange` argument for the `searchSymbols` method, if a user selects this exchange
+      name: "BookLayer", // filter name
+      desc: "BookLayer exchange", // full exchange name displayed in the filter popup
     },
   ],
   symbols_types: [
@@ -238,7 +238,7 @@ const getDatafeed = ({
 
       type: "crypto",
       session: "24x7",
-      exchange: "Liberfi",
+      exchange: "BookLayer",
       listed_exchange: "",
       format: "price",
       // price_type

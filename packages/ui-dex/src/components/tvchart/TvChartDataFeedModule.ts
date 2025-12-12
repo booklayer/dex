@@ -1,11 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { BehaviorSubject } from "rxjs";
-import { DateTime } from "luxon";
-import { minBy, sortBy, uniqBy } from "lodash-es";
-import BigNumber from "bignumber.js";
+import { calculateDecimalPrecision } from "@/libs";
+import {
+  ALL_TV_CHART_RESOLUTIONS,
+  getTvChartLibraryResolution,
+  getTvChartResolutionFrame,
+  getTvChartResolutionReverse,
+  getTvChartTickTimestamp,
+  ITvChartDataFeedModule,
+  parseSymbol,
+  stringifySymbol,
+  TvChartLibraryWidgetBridge,
+  TvChartManager,
+  TvChartPriceType,
+  TvChartQuoteType,
+  TvChartSettings,
+  TvChartSymbolInfo,
+} from "@/libs/tvchart";
+import { quotePricesSubject, updateTokenLatestPrice } from "@/states";
 import { Candle, Resolution, Token } from "@chainstream-io/sdk/openapi";
 import { Unsubscrible } from "@chainstream-io/sdk/stream";
 import { parseChainId } from "@liberfi/core";
+import { chainParam, fetchToken, fetchTokenCandles, QueryKeys } from "@liberfi/react-dex";
+import { dexClientSubject, queryClientSubject } from "@liberfi/ui-base";
+import BigNumber from "bignumber.js";
+import { minBy, sortBy, uniqBy } from "lodash-es";
+import { DateTime } from "luxon";
+import { BehaviorSubject } from "rxjs";
 import {
   Bar,
   IChartWidgetApi,
@@ -19,26 +39,6 @@ import {
   SymbolResolveExtension,
   Timezone,
 } from "../../../../../apps/web/public/static/charting_library";
-import { calculateDecimalPrecision } from "@/libs";
-import {
-  TvChartLibraryWidgetBridge,
-  ALL_TV_CHART_RESOLUTIONS,
-  getTvChartLibraryResolution,
-  getTvChartResolutionFrame,
-  getTvChartResolutionReverse,
-  getTvChartTickTimestamp,
-  ITvChartDataFeedModule,
-  parseSymbol,
-  stringifySymbol,
-  TvChartManager,
-  TvChartPriceType,
-  TvChartQuoteType,
-  TvChartSettings,
-  TvChartSymbolInfo,
-} from "@/libs/tvchart";
-import { quotePricesSubject, updateTokenLatestPrice } from "@/states";
-import { dexClientSubject, queryClientSubject } from "@liberfi/ui-base";
-import { chainParam, fetchToken, fetchTokenCandles, QueryKeys } from "@liberfi/react-dex";
 
 export class TvChartDataFeedModule implements ITvChartDataFeedModule {
   debug: boolean;
@@ -469,7 +469,7 @@ function tokenSymbolInfo(
     ticker: tickerSymbol,
     type: "crypto",
     session: "24x7",
-    exchange: "Liberfi",
+    exchange: "BookLayer",
     priceType: priceType,
     listed_exchange: "",
     format: "price",
