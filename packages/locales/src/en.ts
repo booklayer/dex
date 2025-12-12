@@ -5,7 +5,7 @@ export default {
     "description": "Trade any token on any chain at the first chain-agnostic trading platform. No need to consider chains. 100% decentralized and self-custodial.",
     "languages": {
       "en": "English",
-      "zh": "简体中文"
+      "zh": "繁體中文"
     },
     "header": {
       "home": "Home",
